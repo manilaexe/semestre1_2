@@ -38,10 +38,17 @@ public class Votazione{
 	}
 	
 	
-	
-	public void stampaRis() {
-		for(Candidato c:candidati.values()) {
-			System.out.println("Cognome: "+c.getCognome()+" Voti: "+c.getVoti());
+		public void stampaRis() {
+		String s;
+		try (FileWriter w=new FileWriter("Risultati.txt")){
+			for(Candidato c:candidati.values()) {
+				s="Cognome: "+c.getCognome()+" Voti: "+c.getVoti();
+				System.out.println(s);
+				w.write(s+"\n");
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 	
