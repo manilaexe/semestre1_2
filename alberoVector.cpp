@@ -54,7 +54,7 @@ int main(){
 	c1.insert(&c3);
 	c2.insert(&c4);
 	
-	cout<<"Ecco il tuo meraviglioso albero a cazzo di cane:"<<endl;
+	cout<<"Ecco il tuo meraviglioso albero:"<<endl;
 	root.printTree();
 
 	return 0;
