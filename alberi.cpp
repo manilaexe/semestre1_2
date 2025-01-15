@@ -60,7 +60,7 @@ int main(){
     root.inLeft(5); 
     root.inRight(15);
 
-    cout << "Ecco il tuo meraviglioso albero a cazzo di cane:" <<endl;
+    cout << "Ecco il tuo meraviglioso albero:" <<endl;
     root.print();
     cout << endl;
 
