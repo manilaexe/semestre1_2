@@ -78,11 +78,11 @@ class NodoOrganigramma{
 
 int main(){
 
-	shared_ptr<Persona> p1 = make_shared<Persona>("Simone", "Giuliani", 1000);
-	shared_ptr<Persona> p2 = make_shared<Persona>("Carlo", "Contino", 2000);
-	shared_ptr<Persona> p3 = make_shared<Persona>("Alessandro", "Lazzarini", 3000);
-	shared_ptr<Persona> p4 = make_shared<Persona>("Alice", "Ramenghi", 4000);
-	shared_ptr<Persona> p5 = make_shared<Persona>("Federico", "Margutti", 5000);
+	shared_ptr<Persona> p1 = make_shared<Persona>("Mario", "Rossi", 1000);
+	shared_ptr<Persona> p2 = make_shared<Persona>("Claudia", "Bianchi", 2000);
+	shared_ptr<Persona> p3 = make_shared<Persona>("Alessandro", "Righi", 3000);
+	shared_ptr<Persona> p4 = make_shared<Persona>("Fabrizio", "Neri", 4000);
+	shared_ptr<Persona> p5 = make_shared<Persona>("Federico", "Gialli", 5000);
 
 	shared_ptr<NodoOrganigramma> root = make_shared<NodoOrganigramma>(direttore, p1);
 	shared_ptr<NodoOrganigramma> n2 = make_shared<NodoOrganigramma>(dirigente, p2);
