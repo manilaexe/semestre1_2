@@ -1,3 +1,5 @@
+//funziona in modo anomalo nel caso si reinserisse la partita IVA o il codice fiscale
+
 #include<iostream>
 #include<vector>
 #include<string>
@@ -109,13 +111,15 @@ string myUpper(string a){
 int main(){
 
 	string nome, cognome, numero, iva, cf;
-	int ris;
+	int ris, rem;
 	Rubrica rub;
 
 	cout<<"-0 per uscire"<<endl;
 	cout<<"-1 per inserire una persona "<<endl;
 	cout<<"-2 per inserire un'azienda "<<endl;
 	cout<<"-3 per visualizzare la rubrica "<<endl;
+	cout<<"-4 per eliminare un contatto "<<endl;
+	
 	cin>>ris;
 
 	while(ris!=0){
@@ -158,13 +162,21 @@ int main(){
 				rub.addContatto(new Azienda(nome,iva,numero));	
 				break;
 			case 3:		
-				rub.stampaRub();	
+				rub.stampaRub();
+				break;
+			case 4:
+				cout<<"Inserire l'indice di un contatto da eliminare: ";
+				cin>>rem;
+				rub.removeContatto(rem);
+
+
 		}
 
 		cout<<"-0 per uscire"<<endl;
 		cout<<"-1 per inserire una persona "<<endl;
 		cout<<"-2 per inserire un'azienda "<<endl;
 		cout<<"-3 per visualizzare la rubrica "<<endl;
+		cout<<"-4 per eliminare un contatto "<<endl;		
 		cin>>ris;
 	}
 	
